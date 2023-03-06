@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
 
-def divisible_by_2(my_list=[]):
-    """Find all multiples of 2 in a list."""
-    multiples = []
-    for i in range(len(my_list)):
-        if my_list[i] % 2 == 0:
-            multiples.append(True)
-        else:
-            multiples.append(False)
+def max_integer(my_list=[]):
+    """Find the biggest integer of a list."""
+    if len(my_list) == 0:
+        return (None)
 
-    return (multiples)
+    big = my_list[0]
+    for i in range(len(my_list)):
+        if my_list[i] > big:
+            big = my_list[i]
+
+    return (big)
